@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Jewellery Store</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(255, 102, 0);
+        }
+
+        .div_1 {
+            float: left;
+            width: 380px;
+            /* border:1px solid black; */
+            height: 200px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 30px;
+        }
+
+        .div_1>.img_1 {
+            /* float:left; */
+            margin: auto;
+            height: 200px;
+            width: 300px;
+            margin-left: 40px;
+
+        }
+
+        .div_1>.img_2 {
+            /* float:left; */
+            margin: auto;
+            height: 200px;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .div_1>.img_3 {
+            /* float:left; */
+            margin: auto;
+            height: 200px;
+            width: 300px;
+            margin-left: 40px;
+        }
+
+        .btn {
+            height: 50px;
+            width: 100px;
+            margin: auto;
+            margin-left: 130px;
+        }
+        .price{
+            text-align: center;
+            font-size:26px;
+            font-weight: bold;
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Online Jewellery Store</h1>
+    <div id="container">
+        <div id="d1">
+            
+            <div id="div_1">
+                
+                <img id="img_1"
+                    src="https://www.wamanharipethesons.com/portalrepository/https://www.wamanharipethesons.com/portalrepository/images/homerollingimages/20190828_112652.jpg" />
+                    
+            </div>
+
+            <div id="div_2">
+                <img id="img_2"
+                    src="https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30112_0_r.jpg" />
+            </div>
+
+            <div id="div_3">
+                <img id="img_3"
+                    src="https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30122_0_r.jpg" />
+            </div>
+        </div>
+       
+    </div>
+</body>
+
+</html>
+
+<script>
+    var container = document.getElementById("container");
+    container.setAttribute("class", "container");
+
+    var d1= document.getElementById("d1");
+    d1.setAttribute("class", "d1");
+
+    var div_1 = document.getElementById("div_1");
+    div_1.setAttribute("class", "div_1");
+
+    var img_1 = document.getElementById("img_1");
+    img_1.setAttribute("class", "img_1");
+    img_1.addEventListener('mouseover',hove_img1);
+    img_1.addEventListener('mouseout',org_img1);
+    
+    function hove_img1(){
+        img_1.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30114_0_r.jpg")
+    }
+    function org_img1(){
+        img_1.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/https://www.wamanharipethesons.com/portalrepository/images/homerollingimages/20190828_112652.jpg")
+    }
+    var price1= document.createElement("p");
+    price1.setAttribute("class", "price")
+    price1.textContent="Price:- Rs.2000 /-";
+
+    var addCart = document.createElement("button");
+    addCart.setAttribute("class", "btn")
+    addCart.textContent = "Add to Cart";
+    addCart.addEventListener("click", addcart);
+
+    function addcart() {
+        alert("Added to cart");
+    }
+
+    var div_2 = document.getElementById("div_2");
+    div_2.setAttribute("class", "div_1");
+
+    var img_2 = document.getElementById("img_2");
+    img_2.setAttribute("class", "img_2")
+    img_2.addEventListener('mouseover',hove_img2);
+    img_2.addEventListener('mouseout',org_img2);
+
+    function hove_img2(){
+        img_2.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/https://www.wamanharipethesons.com/portalrepository/images/homerollingimages/20190828_112652.jpg")
+    }
+    function org_img2(){
+        img_2.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30112_0_r.jpg")
+    }
+    var price2= document.createElement("p");
+    price2.setAttribute("class", "price")
+    price2.textContent="Price:- Rs.3000 /-";
+    var addCart2 = document.createElement("button");
+    addCart2.setAttribute("class", "btn")
+    addCart2.textContent = "Add to Cart";
+    addCart2.addEventListener("click", addcart);
+
+    var div_3 = document.getElementById("div_3");
+    div_3.setAttribute("class", "div_1");
+
+    var img_3 = document.getElementById("img_3");
+    img_3.setAttribute("class", "img_3")
+    img_3.addEventListener('mouseover',hove_img3);
+    img_3.addEventListener('mouseout',org_img3);
+
+    function hove_img3(){
+        img_3.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30112_0_r.jpg")
+    }
+    function org_img3(){
+        img_3.setAttribute("src","https://www.wamanharipethesons.com/portalrepository/images/product/WHPS30122_0_r.jpg")
+    }
+    var price3= document.createElement("p");
+    price3.setAttribute("class", "price")
+    price3.textContent="Price:- Rs.4000 /-";
+
+    var addCart3 = document.createElement("button");
+    addCart3.setAttribute("class", "btn")
+    addCart3.textContent = "Add to Cart";
+    addCart3.addEventListener("click", addcart);
+
+    div_1.appendChild(img_1);
+    div_1.appendChild(price1);
+    div_1.appendChild(addCart);  
+    div_2.appendChild(img_2);
+    div_2.appendChild(price2);
+    div_2.appendChild(addCart2);
+    div_3.appendChild(img_3);
+    div_3.appendChild(price3);
+    div_3.appendChild(addCart3);
+    d1.append(div_1, div_2, div_3);
+    container.append(d1);
+</script>
